@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mail.js" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <!-- Login Box -->
+        <div class="box-login" id="login">
+          <h2>Login</h2>
+          <div class="input-group">
+            <input
+              type="text"
+              class="input-box"
+              id="logEmail"
+              placeholder="Email"
+              required
+            />
+            <input
+              type="password"
+              class="input-box"
+              id="logPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="input-submit" id="login-btn" onclick="login()">
+              Login
+            </button>
+            <a href="#" class="forgot">Forgot Password?</a>
+          </div>
+        </div>
+
+        <!-- Register Box -->
+        <div class="box-register" id="register" style="display: none">
+          <h2>Register</h2>
+          <div class="input-group">
+            <!-- Added input fields for first and last name -->
+            <input
+              type="text"
+              class="input-box"
+              id="regFirstName"
+              placeholder="First Name"
+              required
+            />
+            <input
+              type="text"
+              class="input-box"
+              id="regLastName"
+              placeholder="Last Name"
+              required
+            />
+            <input
+              type="email"
+              class="input-box"
+              id="regEmail"
+              placeholder="Email (.edu)"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[edu]{2,}"
+              title="Please enter a valid school email address ending with .edu"
+              required
+            />
+            <input
+              type="password"
+              class="input-box"
+              id="regPassword"
+              placeholder="Password"
+              required
+            />
+            <button class="input-submit" id="register-btn" onclick="register()">
+              Register
+            </button>
+            <div id="registration-error" style="color: red"></div>
+          </div>
+        </div>
+
+        <!-- Login and Register Buttons -->
+        <div class="switch">
+          <button class="login-button" onclick="showLogin()">Login</button>
+          <button class="register-button" onclick="showRegister()">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

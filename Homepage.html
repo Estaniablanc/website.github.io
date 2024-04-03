@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ratingRoommates.html" />
+    <!-- Add any additional CSS or external stylesheets here -->
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div class="main">
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a id="ratingsLink" href="#">Ratings</a></li>
+        <!-- Add an id to the Ratings link for JavaScript -->
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" placeholder="Search.." name="search" />
+      <button type="submit">Search</button>
+    </div>
+
+    <!-- JavaScript for redirection -->
+    <script>
+      // Add event listener to the "Ratings" link
+      document
+        .getElementById("ratingsLink")
+        .addEventListener("click", function (event) {
+          // Prevent the default behavior of the link (i.e., navigating to href)
+          event.preventDefault();
+          // Redirect the user to ratingRoomates.html
+          window.location.href = "ratingRoomates.html";
+        });
+    </script>
+  </body>
+</html>
